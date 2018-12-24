@@ -71,6 +71,15 @@ namespace Pol_Combat_Pseudo_Sim
                 comboBox2.Items.Add(skill.Key);
             }
 
+            charArTextBox.Text = char1.Armor.ToString();
+            charFireTextBox.Text = char1.FireResist.ToString();
+            charEneTextBox.Text = char1.EneResist.ToString();
+            charPoiTextBox.Text = char1.PosResist.ToString();
+            charColdTextBox.Text = char1.ColdResist.ToString();
+            charStrTextBox.Text = char1.Strength.ToString();
+            charDexTextBox.Text = char1.Dexterity.ToString();
+            charIntTextBox.Text = char1.Intelligence.ToString();
+
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -104,6 +113,46 @@ namespace Pol_Combat_Pseudo_Sim
         private void skillValueTextBox_TextChanged(object sender, EventArgs e)
         {
             char1.Skills[comboBox2.Text] = checkDouble(ref skillValueTextBox);
+        }
+
+        private void charStrTextBox_TextChanged(object sender, EventArgs e)
+        {
+            char1.Strength = checkDouble(ref charStrTextBox);
+        }
+
+        private void charDexTextBox_TextChanged(object sender, EventArgs e)
+        {
+            char1.Dexterity = checkDouble(ref charDexTextBox);
+        }
+
+        private void charIntTextBox_TextChanged(object sender, EventArgs e)
+        {
+            char1.Intelligence = checkDouble(ref charIntTextBox);
+        }
+
+        private void charArTextBox_TextChanged(object sender, EventArgs e)
+        {
+            char1.Armor = checkDouble(ref charArTextBox);
+        }
+
+        private void charFireTextBox_TextChanged(object sender, EventArgs e)
+        {
+            char1.FireResist = checkDouble(ref charFireTextBox);
+        }
+
+        private void charColdTextBox_TextChanged(object sender, EventArgs e)
+        {
+            char1.ColdResist = checkDouble(ref charColdTextBox);
+        }
+
+        private void charEneTextBox_TextChanged(object sender, EventArgs e)
+        {
+            char1.EneResist = checkDouble(ref charColdTextBox);
+        }
+
+        private void charPoiTextBox_TextChanged(object sender, EventArgs e)
+        {
+            char1.PosResist = checkDouble(ref charPoiTextBox);
         }
     }
 }

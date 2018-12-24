@@ -145,6 +145,7 @@
             this.charColdTextBox.Name = "charColdTextBox";
             this.charColdTextBox.Size = new System.Drawing.Size(43, 20);
             this.charColdTextBox.TabIndex = 15;
+            this.charColdTextBox.TextChanged += new System.EventHandler(this.charColdTextBox_TextChanged);
             // 
             // charFireTextBox
             // 
@@ -152,6 +153,7 @@
             this.charFireTextBox.Name = "charFireTextBox";
             this.charFireTextBox.Size = new System.Drawing.Size(43, 20);
             this.charFireTextBox.TabIndex = 14;
+            this.charFireTextBox.TextChanged += new System.EventHandler(this.charFireTextBox_TextChanged);
             // 
             // label4
             // 
@@ -177,6 +179,7 @@
             this.charArTextBox.Name = "charArTextBox";
             this.charArTextBox.Size = new System.Drawing.Size(43, 20);
             this.charArTextBox.TabIndex = 11;
+            this.charArTextBox.TextChanged += new System.EventHandler(this.charArTextBox_TextChanged);
             // 
             // label6
             // 
@@ -193,6 +196,7 @@
             this.charIntTextBox.Name = "charIntTextBox";
             this.charIntTextBox.Size = new System.Drawing.Size(43, 20);
             this.charIntTextBox.TabIndex = 9;
+            this.charIntTextBox.TextChanged += new System.EventHandler(this.charIntTextBox_TextChanged);
             // 
             // charDexTextBox
             // 
@@ -200,6 +204,7 @@
             this.charDexTextBox.Name = "charDexTextBox";
             this.charDexTextBox.Size = new System.Drawing.Size(43, 20);
             this.charDexTextBox.TabIndex = 8;
+            this.charDexTextBox.TextChanged += new System.EventHandler(this.charDexTextBox_TextChanged);
             // 
             // label3
             // 
@@ -225,6 +230,7 @@
             this.charStrTextBox.Name = "charStrTextBox";
             this.charStrTextBox.Size = new System.Drawing.Size(43, 20);
             this.charStrTextBox.TabIndex = 5;
+            this.charStrTextBox.TextChanged += new System.EventHandler(this.charStrTextBox_TextChanged);
             // 
             // label1
             // 
@@ -259,6 +265,7 @@
             this.charPoiTextBox.Name = "charPoiTextBox";
             this.charPoiTextBox.Size = new System.Drawing.Size(43, 20);
             this.charPoiTextBox.TabIndex = 19;
+            this.charPoiTextBox.TextChanged += new System.EventHandler(this.charPoiTextBox_TextChanged);
             // 
             // charEneTextBox
             // 
@@ -266,6 +273,7 @@
             this.charEneTextBox.Name = "charEneTextBox";
             this.charEneTextBox.Size = new System.Drawing.Size(43, 20);
             this.charEneTextBox.TabIndex = 18;
+            this.charEneTextBox.TextChanged += new System.EventHandler(this.charEneTextBox_TextChanged);
             // 
             // label7
             // 
