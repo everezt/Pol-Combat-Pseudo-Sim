@@ -53,9 +53,29 @@
             this.charEneTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.enemyPoiTextBox = new System.Windows.Forms.TextBox();
+            this.enemyEneTextBox = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.enemyColdTextBox = new System.Windows.Forms.TextBox();
+            this.enemyFireTextBox = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.enemyArTextBox = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.enemyIntTextBox = new System.Windows.Forms.TextBox();
+            this.enemyDexTextBox = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.enemyStrTextBox = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.enemySkillValueTextBox = new System.Windows.Forms.TextBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -293,11 +313,193 @@
             this.label8.TabIndex = 16;
             this.label8.Text = "ENE :";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.enemyPoiTextBox);
+            this.groupBox3.Controls.Add(this.enemyEneTextBox);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.enemyColdTextBox);
+            this.groupBox3.Controls.Add(this.enemyFireTextBox);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.enemyArTextBox);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.enemyIntTextBox);
+            this.groupBox3.Controls.Add(this.enemyDexTextBox);
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.enemyStrTextBox);
+            this.groupBox3.Controls.Add(this.label16);
+            this.groupBox3.Controls.Add(this.enemySkillValueTextBox);
+            this.groupBox3.Controls.Add(this.comboBox3);
+            this.groupBox3.Location = new System.Drawing.Point(239, 246);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(221, 202);
+            this.groupBox3.TabIndex = 20;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Enemy";
+            // 
+            // enemyPoiTextBox
+            // 
+            this.enemyPoiTextBox.Location = new System.Drawing.Point(150, 147);
+            this.enemyPoiTextBox.Name = "enemyPoiTextBox";
+            this.enemyPoiTextBox.Size = new System.Drawing.Size(43, 20);
+            this.enemyPoiTextBox.TabIndex = 19;
+            this.enemyPoiTextBox.TextChanged += new System.EventHandler(this.enemyPoiTextBox_TextChanged);
+            // 
+            // enemyEneTextBox
+            // 
+            this.enemyEneTextBox.Location = new System.Drawing.Point(150, 121);
+            this.enemyEneTextBox.Name = "enemyEneTextBox";
+            this.enemyEneTextBox.Size = new System.Drawing.Size(43, 20);
+            this.enemyEneTextBox.TabIndex = 18;
+            this.enemyEneTextBox.TextChanged += new System.EventHandler(this.enemyEneTextBox_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(112, 150);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(28, 13);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "POI:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(112, 124);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(35, 13);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "ENE :";
+            // 
+            // enemyColdTextBox
+            // 
+            this.enemyColdTextBox.Location = new System.Drawing.Point(150, 95);
+            this.enemyColdTextBox.Name = "enemyColdTextBox";
+            this.enemyColdTextBox.Size = new System.Drawing.Size(43, 20);
+            this.enemyColdTextBox.TabIndex = 15;
+            this.enemyColdTextBox.TextChanged += new System.EventHandler(this.enemyColdTextBox_TextChanged);
+            // 
+            // enemyFireTextBox
+            // 
+            this.enemyFireTextBox.Location = new System.Drawing.Point(150, 69);
+            this.enemyFireTextBox.Name = "enemyFireTextBox";
+            this.enemyFireTextBox.Size = new System.Drawing.Size(43, 20);
+            this.enemyFireTextBox.TabIndex = 14;
+            this.enemyFireTextBox.TextChanged += new System.EventHandler(this.enemyFireTextBox_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(112, 98);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(39, 13);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "COLD:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(112, 72);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(34, 13);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "FIRE:";
+            // 
+            // enemyArTextBox
+            // 
+            this.enemyArTextBox.Location = new System.Drawing.Point(150, 44);
+            this.enemyArTextBox.Name = "enemyArTextBox";
+            this.enemyArTextBox.Size = new System.Drawing.Size(43, 20);
+            this.enemyArTextBox.TabIndex = 11;
+            this.enemyArTextBox.TextChanged += new System.EventHandler(this.enemyArTextBox_TextChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(111, 47);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(25, 13);
+            this.label13.TabIndex = 10;
+            this.label13.Text = "AR:";
+            // 
+            // enemyIntTextBox
+            // 
+            this.enemyIntTextBox.Location = new System.Drawing.Point(45, 95);
+            this.enemyIntTextBox.Name = "enemyIntTextBox";
+            this.enemyIntTextBox.Size = new System.Drawing.Size(43, 20);
+            this.enemyIntTextBox.TabIndex = 9;
+            this.enemyIntTextBox.TextChanged += new System.EventHandler(this.enemyIntTextBox_TextChanged);
+            // 
+            // enemyDexTextBox
+            // 
+            this.enemyDexTextBox.Location = new System.Drawing.Point(45, 69);
+            this.enemyDexTextBox.Name = "enemyDexTextBox";
+            this.enemyDexTextBox.Size = new System.Drawing.Size(43, 20);
+            this.enemyDexTextBox.TabIndex = 8;
+            this.enemyDexTextBox.TextChanged += new System.EventHandler(this.enemyDexTextBox_TextChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(7, 98);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(28, 13);
+            this.label14.TabIndex = 7;
+            this.label14.Text = "INT:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(7, 72);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(32, 13);
+            this.label15.TabIndex = 6;
+            this.label15.Text = "DEX:";
+            // 
+            // enemyStrTextBox
+            // 
+            this.enemyStrTextBox.Location = new System.Drawing.Point(45, 44);
+            this.enemyStrTextBox.Name = "enemyStrTextBox";
+            this.enemyStrTextBox.Size = new System.Drawing.Size(43, 20);
+            this.enemyStrTextBox.TabIndex = 5;
+            this.enemyStrTextBox.TextChanged += new System.EventHandler(this.enemyStrTextBox_TextChanged);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(6, 47);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(32, 13);
+            this.label16.TabIndex = 4;
+            this.label16.Text = "STR:";
+            // 
+            // enemySkillValueTextBox
+            // 
+            this.enemySkillValueTextBox.Location = new System.Drawing.Point(140, 19);
+            this.enemySkillValueTextBox.Name = "enemySkillValueTextBox";
+            this.enemySkillValueTextBox.Size = new System.Drawing.Size(53, 20);
+            this.enemySkillValueTextBox.TabIndex = 3;
+            this.enemySkillValueTextBox.TextChanged += new System.EventHandler(this.enemySkillValueTextBox_TextChanged);
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(6, 19);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(127, 21);
+            this.comboBox3.TabIndex = 2;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(501, 544);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
@@ -305,6 +507,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "MainScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pol-Combat-Pseudo-Sim";
             this.Load += new System.EventHandler(this.MainScreen_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -312,6 +515,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,6 +549,25 @@
         private System.Windows.Forms.TextBox charEneTextBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox enemyPoiTextBox;
+        private System.Windows.Forms.TextBox enemyEneTextBox;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox enemyColdTextBox;
+        private System.Windows.Forms.TextBox enemyFireTextBox;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox enemyArTextBox;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox enemyIntTextBox;
+        private System.Windows.Forms.TextBox enemyDexTextBox;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox enemyStrTextBox;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox enemySkillValueTextBox;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }
 
