@@ -91,7 +91,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "MainScreen";
-            this.Text = "Form1";
+            this.Text = "Pol-Combat-Pseudo-Sim";
             this.Load += new System.EventHandler(this.MainScreen_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

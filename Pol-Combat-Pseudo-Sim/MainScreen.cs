@@ -24,8 +24,8 @@ namespace Pol_Combat_Pseudo_Sim
 
             if (DialogResult.OK == file.ShowDialog())
             {
-                //try
-                //{
+                try
+                {
                     Items.LoadItems(Utility.Parser.ReadUseableLinesFromFile(file.FileName));
 
                     for(int i = 0; i < Items.items.Count(); i++)
@@ -33,11 +33,11 @@ namespace Pol_Combat_Pseudo_Sim
                         comboBox1.Items.Add(Items.items[i]["Name"]);
 
                     }
-                //}
-                //catch(Exception ex)
-                //{
-                 //   MessageBox.Show(ex.Message);
-               // }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
