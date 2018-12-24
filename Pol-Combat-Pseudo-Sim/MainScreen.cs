@@ -69,7 +69,11 @@ namespace Pol_Combat_Pseudo_Sim
             foreach (var skill in char1.Skills)
             {
                 comboBox2.Items.Add(skill.Key);
+                comboBox3.Items.Add(skill.Key);
             }
+
+            comboBox2.SelectedIndex = 0;
+            comboBox3.SelectedIndex = 0;
 
             charArTextBox.Text = char1.Armor.ToString();
             charFireTextBox.Text = char1.FireResist.ToString();
@@ -80,11 +84,21 @@ namespace Pol_Combat_Pseudo_Sim
             charDexTextBox.Text = char1.Dexterity.ToString();
             charIntTextBox.Text = char1.Intelligence.ToString();
 
+
+            enemyArTextBox.Text = enemy.Armor.ToString();
+            enemyFireTextBox.Text = enemy.FireResist.ToString();
+            enemyEneTextBox.Text = enemy.EneResist.ToString();
+            enemyPoiTextBox.Text = enemy.PosResist.ToString();
+            enemyColdTextBox.Text = enemy.ColdResist.ToString();
+            enemyStrTextBox.Text = enemy.Strength.ToString();
+            enemyDexTextBox.Text = enemy.Dexterity.ToString();
+            enemyIntTextBox.Text = enemy.Intelligence.ToString();
+
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            skillValueTextBox.Text = String.Format("{0:0.00}", char1.GetSkillValue(comboBox2.Text));
+            skillValueTextBox.Text = char1.GetSkillValue(comboBox2.Text);
         }
 
         public double checkDouble(ref TextBox skillTextBox)
@@ -153,6 +167,56 @@ namespace Pol_Combat_Pseudo_Sim
         private void charPoiTextBox_TextChanged(object sender, EventArgs e)
         {
             char1.PosResist = checkDouble(ref charPoiTextBox);
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            enemySkillValueTextBox.Text = enemy.GetSkillValue(comboBox3.Text);
+        }
+
+        private void enemySkillValueTextBox_TextChanged(object sender, EventArgs e)
+        {
+            enemy.Skills[comboBox3.Text] = checkDouble(ref enemySkillValueTextBox);
+        }
+
+        private void enemyStrTextBox_TextChanged(object sender, EventArgs e)
+        {
+            enemy.Strength = checkDouble(ref enemyStrTextBox);
+        }
+
+        private void enemyDexTextBox_TextChanged(object sender, EventArgs e)
+        {
+            enemy.Dexterity = checkDouble(ref enemyDexTextBox);
+        }
+
+        private void enemyIntTextBox_TextChanged(object sender, EventArgs e)
+        {
+            enemy.Intelligence = checkDouble(ref enemyIntTextBox);
+        }
+
+        private void enemyArTextBox_TextChanged(object sender, EventArgs e)
+        {
+            enemy.Armor = checkDouble(ref enemyArTextBox);
+        }
+
+        private void enemyFireTextBox_TextChanged(object sender, EventArgs e)
+        {
+            enemy.FireResist = checkDouble(ref enemyFireTextBox);
+        }
+
+        private void enemyColdTextBox_TextChanged(object sender, EventArgs e)
+        {
+            enemy.ColdResist = checkDouble(ref enemyColdTextBox);
+        }
+
+        private void enemyEneTextBox_TextChanged(object sender, EventArgs e)
+        {
+            enemy.EneResist = checkDouble(ref enemyEneTextBox);
+        }
+
+        private void enemyPoiTextBox_TextChanged(object sender, EventArgs e)
+        {
+            enemy.PosResist = checkDouble(ref enemyPoiTextBox);
         }
     }
 }
