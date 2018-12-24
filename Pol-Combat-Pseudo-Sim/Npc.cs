@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pol_Combat_Pseudo_Sim
 {
-    class Npc
+    public class Npc
     {
         public double Strength { get; set; }
         public double Dexterity { get; set; }
