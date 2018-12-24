@@ -23,7 +23,7 @@ namespace Pol_Combat_Pseudo_Sim
             }        
         }
 
-        static class Dice
+        public static class Dice
         {
             static Random rnd = new Random(DateTime.Now.Millisecond);
 
