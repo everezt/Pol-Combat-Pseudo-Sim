@@ -32,13 +32,25 @@ namespace Pol_Combat_Pseudo_Sim
             this.EneResist = ene;
             this.PosResist = pos;
 
-            Skills["Anatomy"] = 105.00d;
-            Skills["Macefighting"] = 105.00d;
-            Skills["Swordmanship"] = 105.00d;
-            Skills["Fencing"] = 105.00d;
-            Skills["Archery"] = 105.00d;
-            Skills["Parry"] = 105.00d;
-            Skills["Tactics"] = 105.00d;
+            Skills["Anatomy"] = 115.0d;
+            Skills["Macefighting"] = 115.0d;
+            Skills["Swordmanship"] = 115.0d;
+            Skills["Fencing"] = 115.0d;
+            Skills["Archery"] = 115.00;
+            Skills["Parry"] = 115.0d;
+            Skills["Tactics"] = 115.0d;
+        }
+
+        public string GetSkillValue(string skillName)
+        {
+            foreach (var skill in Skills)
+            {
+                if (skill.Key.ToString() == skillName)
+                {
+                    return skill.Value.ToString();
+                }
+            }
+            return "Not found";
         }
     }
 }

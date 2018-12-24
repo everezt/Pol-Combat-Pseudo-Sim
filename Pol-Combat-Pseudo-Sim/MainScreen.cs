@@ -17,6 +17,9 @@ namespace Pol_Combat_Pseudo_Sim
             InitializeComponent();
         }
 
+        Npc char1;
+        Npc enemy;
+
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog file = new OpenFileDialog();
@@ -60,7 +63,47 @@ namespace Pol_Combat_Pseudo_Sim
 
         private void MainScreen_Load(object sender, EventArgs e)
         {
+            char1 = new Npc(140, 120, 10, 40, 50, 0, 0, 50);
+            enemy = new Npc(1000, 200, 300, 100, 200, 20, 20, 20);
 
+            foreach (var skill in char1.Skills)
+            {
+                comboBox2.Items.Add(skill.Key);
+            }
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            skillValueTextBox.Text = String.Format("{0:0.00}", char1.GetSkillValue(comboBox2.Text));
+        }
+
+        public double checkDouble(ref TextBox skillTextBox)
+        {
+            try
+            {
+                double value;
+                if (double.TryParse(skillTextBox.Text, out value))
+                {
+                    return value;
+                }
+                else
+                {
+                    skillTextBox.Text = skillTextBox.Text.Remove(skillTextBox.Text.Length - 1, 1);
+                    skillTextBox.SelectionStart = skillTextBox.Text.Length;
+                    skillTextBox.SelectionLength = 0;
+                    return 0;
+                }
+            }    
+            catch
+            {
+                return 0;
+            }
+        }
+
+        private void skillValueTextBox_TextChanged(object sender, EventArgs e)
+        {
+            char1.Skills[comboBox2.Text] = checkDouble(ref skillValueTextBox);
         }
     }
 }
