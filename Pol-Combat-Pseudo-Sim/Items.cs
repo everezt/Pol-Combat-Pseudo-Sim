@@ -37,20 +37,29 @@ namespace Pol_Combat_Pseudo_Sim
 
                 if (isAnItem)
                 {
-                    string[] attrAndValue = text[i].Split(new char[] { '\t', '\n' }, StringSplitOptions.RemoveEmptyEntries);                   
+                    string[] attrAndValue = text[i].Split(new char[] { '\t', '\n', ' ' }, StringSplitOptions.RemoveEmptyEntries);                   
                     if (attrAndValue.Count() >= 2)
                     {
-
-                        if (String.IsNullOrWhiteSpace(attrAndValue[0]))
+                        
+                        if (attrAndValue.Count() >= 3)
                         {
-                            if (attrAndValue.Count() >= 3)
+                            string key = attrAndValue[0];
+                            string value = "";
+
+                            for(int j = 1; j < attrAndValue.Count(); j++)
                             {
-                                attrAndValue = new string[] { attrAndValue[1], attrAndValue[2] };
+                                if (j == 1)
+                                {
+                                    value += attrAndValue[j];
+                                }
+                                else
+                                {
+                                    value += String.Format(" {0}", attrAndValue[j]);
+                                }
+                                
                             }
-                            else
-                            {
-                                attrAndValue = attrAndValue[1].Split(' ');
-                            }                          
+
+                            attrAndValue = new string[] { key, value };
                         }
 
                         try
