@@ -10,7 +10,7 @@ namespace Pol_Combat_Pseudo_Sim
     {
         public const double StrAPMod = 0.65d;
         public const double DexCritMod = 0.25d;
-        public const double HitRateMod = 0.25d;
+        public const double HitRateMod = 1.00d;
 
         public enum FacingFrom
         {
@@ -40,13 +40,55 @@ namespace Pol_Combat_Pseudo_Sim
 
         public static bool IsHit(Npc attacker, Npc defender, Dictionary<string, string> weapon)
         {
+            //hit_chance = (weapon_attribute + 50.0) / (2.0 * opponent_weapon_attribute + 50.0)
             string skillUsed = weapon["Attribute"];
             double defenderSkill = defender.Skills[skillUsed];
             double attackerSkill = attacker.Skills[skillUsed];
 
-            double hitChance = HitRateMod * ( ( (attackerSkill + double.Parse(weapon["SkillRequired"])) / HitRateMod ) - defenderSkill);
+            double hitChance = HitRateMod * ((attackerSkill + 50.0d) / (2.0d * defenderSkill + 50));
 
             return true; // unfinished
+        }
+
+        public static bool IsParry(Npc defender)
+        {
+            double currSkill = defender.Skills["Parry"];
+
+            int randomChance = (int)(currSkill / 4);
+            int randomDice = Utility.Dice.Roll("1d100");
+
+            if (currSkill >= 100.00)
+            {
+                randomChance += 5;
+            }
+
+            if (currSkill <= 0.00)
+            {
+                currSkill = 1;
+            }
+
+            if (randomDice < randomChance)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+        public static string GetApproxAttackSpeed(Npc attacker, Dictionary<string, string> weapon)
+        {
+            /*
+                Attack speed :
+                Attack speed formula
+                15000 /( (dexterity + 100)* weaponspeed)
+                A dexterity of 140 and a weaponspeed of 35 means ever 1.78s a attack
+            */
+
+            return String.Format("Attack delay => {0:0.##}s", Math.Round( 15000 / ( ( attacker.Dexterity + 100) * int.Parse(weapon["Speed"] ) ), 2).ToString());
+
         }
 
         public static int GetExtraDamageFromStrMod(Npc attacker, Dictionary<string, string> weapon)

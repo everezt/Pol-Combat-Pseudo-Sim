@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Combat.cs" />
     <Compile Include="Items.cs" />
     <Compile Include="MainScreen.cs">
       <SubType>Form</SubType>

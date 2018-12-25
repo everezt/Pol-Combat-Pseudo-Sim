@@ -63,7 +63,7 @@ namespace Pol_Combat_Pseudo_Sim
 
         private void MainScreen_Load(object sender, EventArgs e)
         {
-            char1 = new Npc(140, 120, 10, 40, 50, 0, 0, 50);
+            char1 = new Npc(140, 140, 10, 40, 50, 0, 0, 50);
             enemy = new Npc(1000, 200, 300, 100, 200, 20, 20, 20);
 
             foreach (var skill in char1.Skills)
@@ -217,6 +217,11 @@ namespace Pol_Combat_Pseudo_Sim
         private void enemyPoiTextBox_TextChanged(object sender, EventArgs e)
         {
             enemy.PosResist = checkDouble(ref enemyPoiTextBox);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            richTextBox2.Text = Combat.GetApproxAttackSpeed(char1, Items.GetItem(comboBox1.Text));
         }
     }
 }
